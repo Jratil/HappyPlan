@@ -1,0 +1,4 @@
+INSERT INTO happyplan.plan (plan_id, plan_name, plan_start_time, plan_end_time, plan_duration, user_id) VALUES (2, '学习', '2018-07-31', '2018-08-08', 8, 2);
+INSERT INTO happyplan.plan (plan_id, plan_name, plan_start_time, plan_end_time, plan_duration, user_id) VALUES (3, '学习', '2018-08-07', '2018-08-15', 8, 4);
+INSERT INTO happyplan.plan (plan_id, plan_name, plan_start_time, plan_end_time, plan_duration, user_id) VALUES (4, '锻炼', '2018-08-09', '2018-08-10', 1, 4);
+INSERT INTO happyplan.plan (plan_id, plan_name, plan_start_time, plan_end_time, plan_duration, user_id) VALUES (6, '打王者荣耀', '2018-07-31', '2018-08-17', 17, 4);

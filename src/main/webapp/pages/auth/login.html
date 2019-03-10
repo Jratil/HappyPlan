@@ -1,0 +1,74 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/auth/login.css">
+    <link rel="stylesheet" href="/SemanticUI/semantic.min.css"/>
+
+</head>
+<body>
+
+<div class="main-page">
+
+    <div class="main-panel">
+
+        <div class="main-panel-nav ui top attached menu">
+            <div class="header item">
+                <i class="user icon"></i>&nbsp;登录
+            </div>
+            <div class="right menu">
+                <a class="item" href="/register">注册</a>
+                <a class="item" href="/forget">忘记密码</a>
+            </div>
+        </div>
+
+        <div class="main-panel-header">
+            <h2 class="ui header">
+                <div class="content">
+                    肥宅快乐事
+                </div>
+            </h2>
+        </div>
+
+        <div class="main-panel-content">
+            <form class="ui fluid form my-form">
+                <div class="field">
+                    <label>邮箱:</label>
+                    <div class="ui left icon input">
+                        <i class="mail icon"></i>
+                        <input class="login-input login-userEmail" name="userEmail" type="email" autocomplete="user-userEmail" placeholder="邮箱">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>密码:</label>
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input class="login-input login-userPassword" name="userPassword" type="password" autocomplete="current-userPassword" placeholder="密码">
+                    </div>
+                </div>
+                <div class="ui error message"></div>
+                <div class="field">
+                    <div class="ui button submit black fluid login-input login-btn">登录</div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/js/jq/jquery-3.2.1.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/SemanticUI/semantic.min.js"></script>
+<script src="/js/auth/login.js"></script>
+
+</body>
+</html>
+

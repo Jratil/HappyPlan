@@ -1,0 +1,2 @@
+INSERT INTO happyplan.user (user_id, user_name, user_email, user_password, user_gender, user_birthday, user_create_time) VALUES (4, 'ratil', '1459676432@qq.com', '827ccb0eea8a706c4c34a16891f84e7b', '未知', '2000-00-00', '2018-08-19 07:16:47');
+INSERT INTO happyplan.user (user_id, user_name, user_email, user_password, user_gender, user_birthday, user_create_time) VALUES (8, '12345', '2283082247@qq.com', '827ccb0eea8a706c4c34a16891f84e7b', '未知', '2000-00-00', '2018-09-05 09:00:18');

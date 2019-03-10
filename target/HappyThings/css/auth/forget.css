@@ -1,0 +1,19 @@
+* {
+    font-family: Arial, "Microsoft YaHei";
+}
+
+@media screen and (max-width: 960px) {
+    /*.main-panel-header {*/
+    /*margin: 25% 10% auto 10%;*/
+    /*}*/
+
+    .main-panel-content {
+        margin-top: 40px ;
+    }
+
+    .main-panel {
+        position: absolute;
+        width: 70%;
+        margin: 35% 15%;
+    }
+}

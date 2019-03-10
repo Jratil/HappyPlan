@@ -1,0 +1,58 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>肥宅快乐事</title>
+
+    <link href="/SemanticUI/semantic.min.css" rel="stylesheet">
+    <link href="/layui/css/layui.css" rel="stylesheet">
+    <link href="/css/plan/app.css" rel="stylesheet">
+
+    <script src="/js/jq/jquery-3.2.1.min.js"></script>
+    <script src="/js/user/user_exist.js"></script>
+</head>
+<body>
+
+<div class="main-page">
+
+    <div class="main-panel-nav ui top fixed menu">
+        <div class="header item">
+            <i class="fort awesome icon"></i>&nbsp;肥宅快乐事
+        </div>
+        <div class="right menu">
+            <div class="ui dropdown item">
+                我的 <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item">我的资料</a>
+                    <a class="item" href="/addplan">添加计划</a>
+                    <a class="item logout">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <div class="plan-line">
+            <ul class="layui-timeline">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="/SemanticUI/semantic.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script src="/js/plan/app.js"></script>
+<script src="/js/auth/logout.js"></script>
+
+<script>
+    $('.ui.dropdown')
+        .dropdown()
+    ;
+</script>
+
+</body>
+</html>

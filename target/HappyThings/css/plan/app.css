@@ -1,0 +1,40 @@
+* {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+}
+
+.plan-clear-time {
+    display: none;
+}
+
+.layui-timeline-item {
+    cursor: pointer;
+}
+
+hr {
+    margin: 5px 0;
+    width: 160px;
+}
+
+@media screen and (min-width: 960px) {
+    .plan-line {
+        margin: 20px 20%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    .header.item:before {
+        display: none;
+    }
+
+    .main-panel {
+        position: absolute;
+        width: 100%;
+        margin: 50px 0;
+    }
+    .plan-line {
+        margin: 20px 6%;
+    }
+
+}

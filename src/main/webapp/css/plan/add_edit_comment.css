@@ -1,0 +1,25 @@
+
+.field > label {
+    color: teal;
+}
+
+@media screen and (max-width: 960px) {
+
+    .header.item:before {
+        display: none;
+    }
+
+    .main-panel {
+        position: absolute;
+        width: 76%;
+        margin: 120px 12% 0 12%;
+    }
+
+    .main-panel-header {
+
+    }
+
+    .main-panel-content {
+        margin-top: 30px;
+    }
+}

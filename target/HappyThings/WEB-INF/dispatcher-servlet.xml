@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task.xsd ">
+
+    <context:component-scan base-package="top.ratil.service, top.ratil.controller,
+     top.ratil.utils"/>
+
+    <mvc:annotation-driven/>
+    <task:annotation-driven/>
+
+    <mvc:annotation-driven validator="validator"/>
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+    </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**/*.do"/>
+            <mvc:exclude-mapping path="/**/login.do"/>
+            <mvc:exclude-mapping path="/**/register.do"/>
+            <mvc:exclude-mapping path="/**/verifyCode.do"/>
+            <mvc:exclude-mapping path="/**/logout.do"/>
+            <mvc:exclude-mapping path="/**/forget.do"/>
+            <mvc:exclude-mapping path="/**/test.do"/>
+            <bean id="sessionInterceptorUtil" class="top.ratil.utils.SessionInterceptorUtil"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

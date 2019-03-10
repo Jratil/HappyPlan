@@ -1,0 +1,113 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改计划</title>
+
+    <link href="/SemanticUI/semantic.min.css" rel="stylesheet">
+    <link href="/layui/css/layui.css" rel="stylesheet" media="all  ">
+    <link href="/css/plan/add_plan.css" rel="stylesheet">
+
+    <script src="/js/jq/jquery-3.2.1.min.js"></script>
+    <script src="/js/user/user_exist.js"></script>
+    <script src="/js/auth/logout.js"></script>
+</head>
+<body>
+
+
+<div class="main-page">
+
+    <div class="main-panel-nav ui top fixed menu">
+        <div class="header item">
+            <i class="fort awesome icon"></i>&nbsp;肥宅快乐事
+        </div>
+        <div class="right menu">
+            <div class="ui dropdown item">
+                我的 <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item">我的资料</a>
+                    <a class="item" href="/plan">我的计划</a>
+                    <a class="item logout">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-panel">
+
+        <div class="main-panel-header">
+            <h3 class="ui header">
+                <div class="content">
+                    添加计划
+                </div>
+            </h3>
+        </div>
+
+        <div class="main-panel-content">
+            <form class="ui fluid form my-form">
+                <div class="field">
+                    <label>计划名称:</label>
+                    <div class="ui left icon input">
+                        <i class="tag pink icon"></i>
+                        <input class="plan plan-name" name="planName" type="text" placeholder="计划名称">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>计划开始时间:</label>
+                    <div class="ui left icon input">
+                        <i class="calendar pink icon"></i>
+                        <input class="plan plan-time plan-start-time" name="planStartTime" readonly type="text" placeholder="计划开始时间">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>计划结束时间:</label>
+                    <div class="ui left icon input">
+                        <i class="calendar pink basic icon"></i>
+                        <input class="plan plan-time plan-end-time" name="planEndTime" readonly type="text" placeholder="计划结束时间">
+                    </div>
+                </div>
+                <div class="ui error message"></div>
+                <div class="field">
+                    <div class="ui teal button submit black plan-input plan-add-btn">添加</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/layui/layui.js"></script>
+<script src="/SemanticUI/semantic.min.js"></script>
+<script src="/js/plan/add_plan.js"></script>
+<link href="/css/plan/add_edit_comment.css" rel="stylesheet">
+<script>
+
+    $(document).ready(function () {
+        $('.ui.dropdown')
+            .dropdown();
+
+        layui.use(['laydate'], function () {
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '.plan-start-time'
+                , calendar: true
+                , showBottom: false
+                , done: function (value) {
+                    laydate.render({
+                        elem: '.plan-end-time'
+                        , calendar: true
+                        , showBottom: false
+                        , min: value
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
