@@ -9,3 +9,7 @@
 1、前端使用 layui、semaantic ui编写  
 2、输入验证功能  
 3、基于移动端页面编写  
+
+![image](https://github.com/Jratil/HappyPlan/blob/master/img/login.png)  
+![image](https://github.com/Jratil/HappyPlan/blob/master/img/home.png)  
+![image](https://github.com/Jratil/HappyPlan/blob/master/img/create_plan.png)  
